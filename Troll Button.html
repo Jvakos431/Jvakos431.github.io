@@ -29,9 +29,9 @@
 				button.style.top = Math.floor(Math.random()*((window.innerHeight || document.documentElement.clientHeight) - button.offsetHeight));
 				
 				if (button.innerHTML == "Ne kattints rám!!!") {
-					button.innerHTML = "NE";
+					button.innerHTML = "You've been trolled!!";
 				} else { 
-					button.innerHTML += "E";
+					button.innerHTML += "!";
 					olsAdded++;
 					if (olsAdded > 2) {
 						button.style.width = button.offsetWidth + 17;
