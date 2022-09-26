@@ -1,0 +1,236 @@
+html  {
+    background-color: #404040; /*linear-gradient(rgb(86, 24, 122), rgb(71, 42, 165), rgb(100, 146, 219) rgb(71, 42, 165), rgb(86, 24, 122));*/
+  }
+  
+  header {
+      background: linear-gradient(90deg, rgba(51,150,215,1) 0%, rgba(207,49,49,1) 100%); 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 10%;
+      border-radius: 50px;
+  }
+  
+  li, a, button {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: rgb(106, 181, 243);
+      text-decoration: none;
+  }
+  
+  .logo {
+    width: 10%;
+    height: 10%;
+  }
+  
+  a:hover {
+      font-size: 18px;
+  }
+  
+  a, button {
+      color: white;
+  }
+  
+  .nav_links {
+      list-style: none;
+      margin-top: -40px;
+  }
+  
+  .nav_links li {
+      display: inline-block;
+      padding: 0px 20px;
+  }
+  
+  .nav_links li a {
+      transition: all 0.3s ease 0s;
+  }
+  
+  button {
+      padding: 9px 25px;
+      background-color: rgba(0, 136, 169, 1);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      margin-bottom: 30px;
+  }
+  
+  button:hover {
+      background-color: rgba(0, 136, 169, 0.5);
+      color: white;
+      box-shadow: 0 0 2px 1px white;
+  
+  }
+  
+  table {
+    width: 956px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white;
+    font-family: Arial;
+    margin-top: 10px;
+  }
+  
+  .cell {
+    width: 17%;
+    text-align: center;
+    font-size: 12px;
+    background-color: #ffffff;
+  }
+  
+  .cell_day {
+    background-color: #6f6f97;
+    font-family: Arial;
+  }
+  
+  .cell_interval {
+    width: 9%;
+    text-align: center;
+    font-weight: Bold;
+    font-size: 14px;
+    background-color: #6f6f97;
+  }
+  
+  .line4:hover {
+    color: #6f6f97;
+  }
+  
+  .line3:hover {
+    color: #6f6f97;
+  }
+  
+  .line2:hover {
+    color: #97556c;
+  }
+  
+  .line1:hover {
+    color: #97556c;
+  }
+  
+  #box {
+    background-image: linear-gradient(90deg, rgba(51,150,215,1) 0%, rgba(207,49,49,1) 100%);
+    border-radius: 50px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: -20px;
+  }
+  
+  #fb {
+    width: 50px;
+    height: 50px;
+    margin-bottom: -20px;
+  }
+  
+  .slider {
+      width: auto;
+      height: 400px;
+      overflow: hidden;
+      margin-top: 10px;
+      color: black  ;
+      border-radius: 50px;
+    }
+    
+    .slides {
+      width: 500%;
+      height: 500px;
+      display: flex;
+    }
+  
+    .text {
+      margin-left: 75px;
+      margin-top: 50px;
+    }
+    
+    .slides input {
+      display: none;
+    }
+    
+    .slide {
+      width: 20%;
+      transition: 2s;
+    }
+    
+    .slide img {
+      width: 800px;
+      height: 500px;
+    }
+    
+    .navigation-manual {
+      position: absolute;
+      width: 800px;
+      margin-top: -40px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .manual-btn {
+      border: 2px solid #40D3DC;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+    
+    .manual-btn:not(:last-child) {
+      margin-right: 40px;
+    }
+    
+    .manual-btn:hover {
+      background: #40D3DC;
+    }
+    
+    #radio1:checked ~ .firs {
+      margin-left: 0;
+    }
+    
+    #radio2:checked ~ .first {
+      margin-left: -20%;
+    }
+    
+    #radio3:checked ~ .first {
+      margin-left: -40%;
+    }
+    
+    #radio4:checked ~ .first {
+      margin-left: -60%;
+    }
+    
+    .navigation-auto {
+      position: absolute;
+      display: flex;
+      width: 800px;
+      justify-content: center;
+      margin-top: 460px;
+    }
+    
+    .navigation-auto div {
+      border: 2px solid #40D3DC;
+      padding: 5px;
+      border-radius: 10px;
+      transition: 1s;
+    }
+    
+    .navigation-auto div:not(:last-child) {
+      margin-right: 40px;
+    }
+    
+    #radio1:checked ~ .navigation-auto .auto-btn1 {
+      background: #40D3DC;
+    }
+    
+    #radio2:checked ~ .navigation-auto .auto-btn2 {
+      background: #40D3DC;
+    }
+    
+    #radio3:checked ~ .navigation-auto .auto-btn3 {
+      background: #40D3DC;
+    }
+    
+    #radio4:checked ~ .navigation-auto .auto-btn4 {
+      background: #40D3DC;
+    }
