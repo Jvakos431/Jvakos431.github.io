@@ -1,0 +1,90 @@
+body {
+    user-select: none;
+    text-align: center;
+    background-color: rgb(252, 228, 197);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px rgb(23, 20, 20);
+    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/38094b95235473.5e92ecc4409a8.gif);
+    background-size: cover;
+    background-position: center;
+    height: relative;
+    font-family: Verdana;
+}
+td {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(234, 0, 255, 0.795);
+    box-shadow: 1px 1px 3px inset black;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(233, 201, 248);
+    user-select: none;
+}
+td.X {
+    background-color: rgb(111, 0, 255);
+    color: rgb(255, 255, 255);
+}
+td.O {
+    background-color: rgb(180, 0, 0);
+    color:rgb(255, 255, 255)
+}
+td:hover {
+    background-color: rgb(100, 56, 82);
+    box-shadow: 1px 1px 3px black;
+}
+td:active {
+    background-color: rgb(144, 54, 54);
+    box-shadow: 1px 1px 3px inset black;
+}
+td.X:hover {
+    background-color: rgb(113, 64, 159);
+    box-shadow: 1px 1px 3px inset black;
+    cursor: not-allowed;
+}
+td.O:hover {
+    background-color: rgb(25, 100, 165);
+    box-shadow: 1px 1px 3px inset black;
+    cursor: not-allowed;
+}
+table {
+    cursor: not-allowed;
+    margin: auto;
+    padding: 6px;
+    border-spacing: 4px;
+    background-color: rgba(111, 0, 255, 0.753);
+    border-radius: 7px;
+    box-shadow: 1px 1px 4px black;
+}
+.banner-btn a{
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: rgb(160, 0, 147);
+    border: .5px solid rgb(110, 0, 184);
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+    font-family: Verdana;
+    }
+    .banner-btn a span{
+    width:  0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(110, 0, 184);
+    z-index: -1;
+    transition: 0.5s;
+
+    }
+    .banner-btn a:hover span{
+    width: 100%;
+    }
+    .banner-btn a:hover{
+    color: white;
+    }
