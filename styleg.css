@@ -1,0 +1,50 @@
+body{
+    background: url(https://i.pinimg.com/originals/77/ca/a3/77caa32884d735d439ade45ba37feaf2.gif);
+    background-size: cover;
+    background-position: center;
+    height: relative;
+    font-family: Verdana;
+    text-align: center;
+}
+.banner-btn{
+    margin: 20px auto 0;
+    
+}
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-btn a{
+    text-align: center;
+    top: 50%;
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: rgb(160, 0, 147);
+    border: .5px solid rgb(110, 0, 184);
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+    font-family: Verdana;
+    }
+    .banner-btn a span{
+    width:  0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(110, 0, 184);
+    z-index: -1;
+    transition: 0.5s;
+
+    }
+    .banner-btn a:hover span{
+    width: 100%;
+    }
+    .banner-btn a:hover{
+    color: white;
+    }
