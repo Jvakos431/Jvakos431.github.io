@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;  
+}
+body {
+    background: url(https://i.pinimg.com/originals/7a/61/fe/7a61fe192013a896351c2a315238a36e.gif);
+    background-size: cover;
+    background-position: center;
+    height: relative;
+    font-family: Verdana;
+    text-align: center;
+}
+td.o {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 4px inset black;
+    text-align: center;
+    font-size: 10px;
+
+}
+td.p {
+    box-shadow: 1px 1px 4px inset black;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 10px;
+    color: rgb(248, 246, 201);
+    height: 20px;
+}
+td.p1 { background-color: rgb(0, 255, 0) }
+td.p2 { background-color: red }
+td.sc { background-color: rgb(0, 0, 0) }
+table.main {
+    cursor: none;
+    margin: auto;
+    padding: 6px;
+    border-spacing: 0px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 1px 1px 4px black;
+}
+table.m2 {
+    margin: 5px auto;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 7px black;
+    padding: 1px;
+}
+td.x {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(249, 226, 166);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px inset black;
+}
+span.r { color: red   }
+span.g { color: rgb(0, 255, 0) }
+div#psz {
+    font-size: 30px;
+    padding: 5px;
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    box-shadow: 1px 1px 4px inset black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+.banner-btn{
+    margin: 10px auto 0;
+    text-align: center;
+
+}
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 100px;
+    padding: 12px 0;
+    color: #fff;
+    border: .5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+    font-family: Verdana;
+    font-weight: bold
+
+}
+.banner-btn a span{
+    width:  0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+.banner-btn a:hover span{
+    width: 100%;
+}
+.banner-btn a:hover{
+    color: black;
+}
+.banner-text h1{
+    color: #fff;
+    font-size: 60px;
+    font-family: Verdana;
+    margin-top: 25px;
+}
