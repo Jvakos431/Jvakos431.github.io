@@ -1,0 +1,66 @@
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"/>
+<style>
+    body{
+        margin: 0;
+        background: black;
+    }
+    .banner-btn{
+    margin: 20px auto 0;
+    text-align: center;
+
+    }
+    .banner-btn a{
+    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 0;
+    margin-bottom: 8px;
+    color: rgb(0, 0, 0);
+    border: .5px solid #000000;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+    font-family: Verdana;
+    font-weight: bold
+
+    }
+    .banner-btn a span{
+    width:  0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b91c1c;
+    z-index: -1;
+    transition: 0.5s;
+
+    }
+    .banner-btn a:hover span{
+    width: 100%;
+    }
+    .banner-btn a:hover{
+    color: rgb(255, 255, 255);
+    }   
+
+</style>
+
+<div class="fixed text-white text-sm ml-2 mt-1 select-none"><span>Score: </span><span id="scoreEl">0</span></div>
+
+<div class="fixed inset-0 flex items-center justify-center" id="modalEl">
+    <div class="bg-white max-w-md w-full p-6 text-center">
+        <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
+        <p class="text-sm text-gray-700">Points</p>
+        <div class="banner-btn">
+            <a id="startGameBtn" ><span></span>Start Game</a>     
+            <a href="https://jvakos431.github.io/game.html" ><span></span>Back</a>             
+        </div>
+    </div>
+</div>
+
+<canvas></canvas>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" 
+integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" 
+crossorigin="anonymous" 
+></script>
+<script src="./golyo.js"></script>
