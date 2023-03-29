@@ -10,7 +10,6 @@ body{
     height: relative;
     font-family: Verdana;
     text-align: center;
-    padding-left: 5%;
 }
 #main {
     position: absolute;
@@ -62,3 +61,15 @@ body{
 .banner-btn a:hover{
     color: rgb(255, 255, 255);
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  circle {
+    stroke-dasharray: 502.4 502.4;
+    stroke-dashoffset: 0;
+    animation-timing-function: ease-in-out;
+  }
