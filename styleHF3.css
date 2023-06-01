@@ -38,7 +38,7 @@ body{
     margin: 0 10px;
     padding: 12px 0;
     color: #000000;
-    border: .5px solid #000000;
+    border: .5px solid white;
     position: relative;
     z-index: 1;
     transition: color 0.5s;
