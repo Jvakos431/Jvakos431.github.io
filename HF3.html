@@ -1,36 +1,119 @@
 <html>
     <head>
         <title>J-V Á</title>
-        <link rel="stylesheet" href="styleHFerror.css">
+        <link rel="stylesheet" href="styleHF3.css">
+        <style>
+          #svg-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+          }
+      
+          .eye {
+            fill: black;
+          }
+      
+          .mouth {
+            fill: none;
+            stroke: black;
+            stroke-width: 2px;
+            transform-origin: center;
+          }
+      
+          .blink {
+            animation: blink-animation 1s infinite;
+            transform-origin: center;
+          }
+      
+          @keyframes blink-animation {
+            0% { transform: scaleY(1); }
+            50% { transform: scaleY(0.1); }
+            100% { transform: scaleY(1); }
+          }
+      
+          .smile {
+            animation: smile-animation 2s infinite;
+            transform-origin: center;
+          }
+      
+          @keyframes smile-animation {
+            0% { d: path("M75,180 Q150,250 225,180"); }
+            50% { d: path("M75,180 Q150,110 225,180"); }
+            100% { d: path("M75,180 Q150,250 225,180"); }
+          }
+        </style>
     </head>
     <body>
         <section id="banner">
             <div class="banner-text">
-                <h1>Menő animáció ugye? :)))</h1>
-                <div class="container">
-                    <svg viewBox="0 0 500 500">
-                      <rect x="50%" y="50%" width="180" height="180" fill="none" stroke="#000" stroke-width="4" />
-                      <circle cx="100" cy="100" r="80" fill="#fff" stroke="#000" stroke-width="4">
-                        <animate
-                          attributeName="stroke-dashoffset"
-                          values="0; 502.4"
-                          dur="5s"
-                          repeatCount="indefinite"
-                        />
-                        <animate
-                          attributeName="stroke-dasharray"
-                          values="502.4 502.4; 0 502.4"
-                          dur="5s"
-                          repeatCount="indefinite"
-                        />
-                      </circle>
-                      <text x="50%" y="50%" text-anchor="middle" font-size="72" font-weight="bold">π</text>
-                    </svg>
-                  </div>
-                <div class="banner-btn">
-                    <a href="doga.html"><span></span>Vissza</a>
-                </div>
+                <h1>Menő svg ugye? :)))</h1>
+                <div id="svg-container"></div>
             </div>
         </section>
+        <script>
+          // Create the SVG element
+          const svgNS = "http://www.w3.org/2000/svg";
+          const svg = document.createElementNS(svgNS, "svg");
+          svg.setAttribute("width", "300");
+          svg.setAttribute("height", "300");
+      
+          // Create the face circle
+          const face = document.createElementNS(svgNS, "circle");
+          face.setAttribute("cx", "150");
+          face.setAttribute("cy", "150");
+          face.setAttribute("r", "135");
+          face.setAttribute("fill", "yellow");
+      
+          // Create the eyes
+          const leftEye = createEye(90, 120);
+          const rightEye = createEye(210, 120);
+      
+          // Create the mouth
+          const mouth = document.createElementNS(svgNS, "path");
+          mouth.setAttribute("class", "mouth");
+          mouth.setAttribute("d", "M75,180 Q150,250 225,180");
+      
+          // Add the elements to the SVG
+          svg.appendChild(face);
+          svg.appendChild(leftEye);
+          svg.appendChild(rightEye);
+          svg.appendChild(mouth);
+      
+          // Add the SVG to the container
+          const svgContainer = document.getElementById("svg-container");
+          svgContainer.appendChild(svg);
+      
+          // Helper function to create an eye
+          function createEye(cx, cy) {
+            const eye = document.createElementNS(svgNS, "circle");
+            eye.setAttribute("class", "eye");
+            eye.setAttribute("cx", cx);
+            eye.setAttribute("cy", cy);
+            eye.setAttribute("r", "20");
+            return eye;
+          }
+      
+          // Blink animation
+          setInterval(() => {
+            leftEye.classList.add("blink");
+            rightEye.classList.add("blink");
+      
+            setTimeout(() => {
+              leftEye.classList.remove("blink");
+              rightEye.classList.remove("blink");
+            }, 200);
+          }, 4000);
+      
+          // Smile animation
+          mouth.classList.add("smile");
+      
+          // Stop smile animation after 10 seconds
+          setTimeout(() => {
+            mouth.classList.remove("smile");
+          }, 10000);
+        </script>
     </body>
 </html>
